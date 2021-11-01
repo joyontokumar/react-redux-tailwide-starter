@@ -5,7 +5,7 @@ import Header from '../layouts/header/index';
 const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <div className="min-vh-100">
+      <div>
         <Header />
         {children}
         <Footer />
