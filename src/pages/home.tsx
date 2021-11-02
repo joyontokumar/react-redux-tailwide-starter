@@ -2,49 +2,37 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Person from '../components/person';
 import Layout from '../layouts/index';
 const Home = () => {
+  const PersonList = [
+    {
+      pic: 'https://picsum.photos/id/237/400/300',
+      name: 'First',
+      description: 'This is the first item',
+    },
+    {
+      pic: 'https://picsum.photos/400/300?grayscale',
+      name: 'Second',
+      description: 'This is the second item',
+    },
+    {
+      pic: 'https://picsum.photos/seed/picsum/400/300',
+      name: 'Third',
+      description: 'This is the third item',
+    },
+  ];
   return (
     <Layout>
       <div className="content pt-5 pb-5">
         <Container>
           <Row>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-red-400">
-                <h2>ONE</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
+            <Col lg={12}>
+              <h2>Home Page</h2>
             </Col>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-pink-400">
-                <h2>TWO</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-red-500">
-                <h2>THREE</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-pink-400">
-                <h2>FOUR</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-pink-500">
-                <h2>FIVE</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </Col>
-            <Col lg={4}>
-              <div className="single p-2 mb-2 bg-red-400">
-                <h2>SIX</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </Col>
+          </Row>
+          <Row>
+            <Person persons={PersonList} />
           </Row>
         </Container>
       </div>
